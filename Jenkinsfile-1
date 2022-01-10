@@ -20,22 +20,9 @@ pipeline {
    	stage('Scan') {
 	    steps {
                 withSonarQubeEnv(installationName: 'sq1') { 
-         sh './mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+         sh './mvnw clean install org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
             }
           }
        }
     }
-
-
-post {
-    always {
-
-        recordIssues(
-          enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), checkStyle(pattern: '**/sonar-report.json**', reportEncoding: 'UTF-8')]
-        )
-    }
-  }
 }
-
-
