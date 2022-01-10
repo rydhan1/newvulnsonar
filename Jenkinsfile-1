@@ -28,7 +28,7 @@ pipeline {
 
   post {
     always {
-        sonar(
+        junit(
           testResults: '**/build/test-results/test/*.xml'
         )
         recordIssues(
