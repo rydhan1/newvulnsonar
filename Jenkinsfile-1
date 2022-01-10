@@ -28,10 +28,9 @@ pipeline {
 
     post {
         always {
-            
-	  recordIssues(
-          enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), checkStyle(pattern: '**/sonar-report.json', reportEncoding: 'UTF-8')])
+            		    
+	    junit testResults: '**/target/surefire-reports/TEST-*.xml'
+            recordIssues enabledForFailure: true, tool: sonarQube()
 
         }
     }
