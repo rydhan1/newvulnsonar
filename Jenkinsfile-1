@@ -21,7 +21,7 @@ pipeline {
 	    steps {
                 withSonarQubeEnv(installationName: 'sq1') { 
          sh './mvnw clean install org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
-	 sh './mvn -Dsonar.report.export.path=sonar-report.json'
+	 sh './mvnw -Dsonar.report.export.path=sonar-report.json'
             }
           }
        }
