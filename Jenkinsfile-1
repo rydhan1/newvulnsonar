@@ -29,10 +29,7 @@ pipeline {
   post {
     always {
 
-        recordIssues(
-          enabledForFailure: true, aggregatingResults: true, 
-          tools: [sonarQube()]
-        )
+        recordIssues tool: java(), ignoreQualityGate: false, ignoreFailedBuilds: true
 
         }
     }
