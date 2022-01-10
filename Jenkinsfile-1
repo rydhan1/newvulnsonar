@@ -28,7 +28,7 @@ pipeline {
 
   post {
     always {
-        sonarQube(
+        sonar(
           allowEmptyResults: true, 
           testResults: '**/build/test-results/test/*.xml'
         )
