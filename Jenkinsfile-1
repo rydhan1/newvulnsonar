@@ -29,7 +29,7 @@ pipeline {
   post {
     always {
 
-        recordIssues tool: java(), ignoreQualityGate: false, ignoreFailedBuilds: true
+        recordIssues tool: sonarQube(), ignoreQualityGate: false, ignoreFailedBuilds: true
 
         }
     }
