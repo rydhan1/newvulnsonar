@@ -21,7 +21,6 @@ pipeline {
 	    steps {
                 withSonarQubeEnv(installationName: 'sq1') { 
          sh './mvnw clean install org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
-
             }
           }
        }
@@ -29,10 +28,12 @@ pipeline {
 
     post {
         always {
-            sonarQube testResults: '**/sonar-report.json'
-          
-            recordIssues enabledForFailure: true, tool: sonarQube() '**/target/sonar-report.jso'
+            sonarQube testResults: '**/target/surefire-reports/TEST-*.xml'
 
+            recordIssues enabledForFailure: true, tools: [mavenConsole(), java(), javaDoc()]
+            recordIssues enabledForFailure: true, tool: sonarQube()
+            recordIssues enabledForFailure: true, tool: cpd(pattern: '**/target/cpd.xml')
+            recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
     }
   }
 }
