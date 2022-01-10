@@ -28,7 +28,7 @@ pipeline {
 
     post {
         always {
-            sonarQube testResults: 'results.xml'
+            	sonarQube()testResults: 'results.xml'
 
             recordIssues enabledForFailure: true, tools: [mavenConsole(), java(), javaDoc()]
             recordIssues enabledForFailure: true, tool: sonarQube()
