@@ -32,7 +32,7 @@ post {
 
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), sonar(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
+          tools: [java(), sonarQube(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
 	  
         )
     }
