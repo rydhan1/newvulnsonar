@@ -30,7 +30,7 @@ post {
     always {
         junit(
           allowEmptyResults: true, 
-          testResults: '**/build/test-results/test/*.xml'
+          testResults: '**/sonar-report.json'
         )
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
