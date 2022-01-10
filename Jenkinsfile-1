@@ -31,7 +31,7 @@ pipeline {
 
 recordIssues(
     enabledForFailure: true, 
-    tool: java(pattern: '*.log'), 
+    tool: sonar(pattern: '**/sonar-report.json'), 
     filters: [includeFile('MyFile.*.java'), excludeCategory('WHITESPACE')]
 )
     }
