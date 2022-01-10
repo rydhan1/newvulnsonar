@@ -29,9 +29,8 @@ pipeline {
   post {
     always {
         junit(
- 
+          allowEmptyResults: false, 
           testResults: '**/build/test-results/test/*.xml'
-	  allowEmptyResults: true,
         )
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
