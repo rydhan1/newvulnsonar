@@ -32,7 +32,7 @@ post {
 
         sonarQube(
           allowEmptyResults: true, 
-          testResults: '**/build/test-results/test/*.xml'
+          testResults: 'main.xml'
 
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
