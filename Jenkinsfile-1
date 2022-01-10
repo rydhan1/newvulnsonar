@@ -26,12 +26,15 @@ pipeline {
        }
     }
 
-post {
+  post {
     always {
-
+        junit(
+          allowEmptyResults: true, 
+          testResults: '**/build/test-results/test/*.xml'
+        )
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), checkStyle('vulnado-0.0.1-SNAPSHOT.jar', reportEncoding: 'UTF-8')]
+          tools: [sonar(), checkStyle(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
         )
 
         }
