@@ -30,9 +30,13 @@ pipeline {
 post {
     always {
 
+        sonar(
+          allowEmptyResults: true, 
+          testResults: '**/build/test-results/test/*.xml'
+
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), sonarQube(pattern: 'main.xml', reportEncoding: 'UTF-8')]
+          tools: [java(), sonarQube(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
         )
     }
   }
