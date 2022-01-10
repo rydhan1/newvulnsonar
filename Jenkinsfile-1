@@ -34,9 +34,6 @@ post {
           enabledForFailure: true, aggregatingResults: true, 
           tools: [java(), sonar(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
 	  
-    sonar(
-          allowEmptyResults: true, 
-          testResults: '**/build/test-results/test/*.xml'
         )
     }
   }
