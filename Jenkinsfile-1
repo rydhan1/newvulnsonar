@@ -26,14 +26,13 @@ pipeline {
        }
     }
 
-    post {
-        always {
-            	sonarQube()testResults: 'results.xml'
+post {
+    always {
 
-            recordIssues enabledForFailure: true, tools: [mavenConsole(), java(), javaDoc()]
-            recordIssues enabledForFailure: true, tool: sonarQube()
-            recordIssues enabledForFailure: true, tool: cpd(pattern: '**/target/cpd.xml')
-            recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
+        recordIssues(
+          enabledForFailure: true, aggregatingResults: true, 
+          tools: [java(), sonarQube(pattern: '**/build/**/sonar-report.json', reportEncoding: 'UTF-8')]
+        )
     }
   }
 }
