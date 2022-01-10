@@ -31,6 +31,7 @@ pipeline {
         junit(
  
           testResults: '**/build/test-results/test/*.xml'
+	  allowEmptyResults: false,
         )
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
