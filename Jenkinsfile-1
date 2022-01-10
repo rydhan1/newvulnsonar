@@ -31,7 +31,7 @@ pipeline {
 
 recordIssues(
     enabledForFailure: true, 
-    tool: sonar(pattern: '**/sonar-report.json'), 
+    tool: sonarQube(pattern: '**/sonar-report.json'), 
     filters: [includeFile('MyFile.*.java'), excludeCategory('WHITESPACE')]
 )
     }
