@@ -30,7 +30,7 @@ post {
     always {
         junit(
           allowEmptyResults: true, 
-          testResults: '**/sonar-report.json'
+          testResults: '**/vulnado-0.0.1-SNAPSHOT.jar'
         )
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
