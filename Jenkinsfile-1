@@ -28,7 +28,7 @@ pipeline {
 
 post {
     always {
-        sonar(
+        sonarQube(
           allowEmptyResults: true, 
           testResults: '**/vulnado-0.0.1-SNAPSHOT.jar'
         )
