@@ -28,7 +28,7 @@ pipeline {
 
     post {
         always {
-            junit testResults: '**/target/surefire-reports/TEST-*.xml'
+            sonar testResults: '**/target/surefire-reports/TEST-*.xml'
 
             recordIssues enabledForFailure: true, tool: sonarQube()
         }
