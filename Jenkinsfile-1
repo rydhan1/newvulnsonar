@@ -29,7 +29,9 @@ pipeline {
   post {
     always {
 
-        recordIssues tool: sonarQube(), ignoreQualityGate: false, ignoreFailedBuilds: true
+            recordIssues enabledForFailure: true, tool: checkStyle()
+            recordIssues enabledForFailure: true, tool: findBugs()
+            recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
 
         }
     }
