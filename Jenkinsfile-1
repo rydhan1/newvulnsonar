@@ -26,11 +26,13 @@ pipeline {
        }
     }
 
-    post {
-        always {
-            		    
-	    junit testResults: '**/target/surefire-reports/TEST-*.xml'
-            recordIssues enabledForFailure: true, tool: sonarQube()
+post {
+    always {
+
+        recordIssues(
+          enabledForFailure: true, aggregatingResults: true, 
+          tools: [java(), sonarQube(pattern: '**/build/**/sonar-report.json', reportEncoding: 'UTF-8')]
+        )
 
         }
     }
