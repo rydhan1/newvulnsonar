@@ -20,7 +20,8 @@ pipeline {
    	stage('Scan') {
 	    steps {
                 withSonarQubeEnv(installationName: 'sq1') { 
-         sh './mvnw clean install org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar sonar.report.export.path=sonar-report.json'
+         sh './mvnw clean install org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+	 sh './mvnw sonar.report.export.path=sonar-report.json'
             }
           }
        }
