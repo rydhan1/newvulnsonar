@@ -31,7 +31,7 @@ pipeline {
 
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), checkStyle(pattern: '**/sonar-report.json', reportEncoding: 'UTF-8')]
+          tools: [java(), checkStyle(pattern: '**/sonar-report.xml', reportEncoding: 'UTF-8')]
         )
     }
   }
