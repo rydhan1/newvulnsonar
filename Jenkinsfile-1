@@ -29,10 +29,11 @@ pipeline {
 post {
     always {
 
-        recordIssues(
-          enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), sonarQube(pattern: 'sonar-report.json', reportEncoding: 'UTF-8')]
-        )
+recordIssues(
+    enabledForFailure: true, 
+    tool: java(pattern: '*.log'), 
+    filters: [includeFile('MyFile.*.java'), excludeCategory('WHITESPACE')]
+)
     }
   }
 }
