@@ -34,7 +34,7 @@ pipeline {
         )
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [sonar(), checkStyle(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
+          tools: [sonarQube(), checkStyle(pattern: '**/build/**/main.xml', reportEncoding: 'UTF-8')]
         )
 
         }
