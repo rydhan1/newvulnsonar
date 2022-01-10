@@ -31,7 +31,7 @@ post {
 
 recordIssues(
     enabledForFailure: true, 
-    tool: java(pattern: '*.log'), 
+    tool: java(pattern: 'test.log'), 
     filters: [includeFile('MyFile.*.java'), excludeCategory('WHITESPACE')]
 )
     }
