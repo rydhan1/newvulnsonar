@@ -31,7 +31,7 @@ post {
 
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), sonarQube(pattern: '**/build/**/sonar-report.json', reportEncoding: 'UTF-8')]
+          tools: [java(), sonarQube(pattern: '/var/jenkins_home/workspace/VulnadoSonar/target/vulnado-0.0.1-SNAPSHOT.jar', reportEncoding: 'UTF-8')]
         )
 
         }
