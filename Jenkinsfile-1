@@ -31,7 +31,7 @@ pipeline {
 
         recordIssues(
           enabledForFailure: true, aggregatingResults: true, 
-          tools: [java(), checkStyle(pattern: '/var/jenkins_home/workspace/VulnadoSonar/main.xml', reportEncoding: 'UTF-8')]
+          tools: [java(), checkStyle(absolute: '/var/jenkins_home/workspace/VulnadoSonar/main.xml', reportEncoding: 'UTF-8')]
         )
     }
   }
