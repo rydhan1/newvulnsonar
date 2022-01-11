@@ -20,7 +20,7 @@ pipeline {
    	stage('Scan') {
 	    steps {
                 withSonarQubeEnv(installationName: 'sq1') { 
-         sh './mvnw clean install pmd:pmd findbugs:findbugs checkstyle:checkstyle spotbugs:spotbugs'
+         sh './mvnw clean install pmd:pmd findbugs:findbugs checkstyle:checkstyle'
             }
           }
        }
@@ -29,7 +29,6 @@ pipeline {
   post {
     always {
 
-	    recordIssues enabledForFailure: true, tool: spotBugs()
 	    recordIssues enabledForFailure: true, tool: checkStyle()
             recordIssues enabledForFailure: true, tool: findBugs()
             recordIssues enabledForFailure: true, tool: pmdParser(pattern: '**/target/pmd.xml')
