@@ -19,7 +19,7 @@ pipeline {
         }
         stage('WHO'){
             steps {
-                sh 'java -jar C:\Users\NHamid\FODUploader\FodUpload.jar -z C:\Users\NHamid\Desktop\vlun\vulnado-master.zip -uc hamid-test hammer510!?N -rid 378140 -purl https://ams.fortify.com -aurl https://api.ams.fortify.com -tc kristastevens -ep 2 -pp 2'
+                $ cmd /c call C:\Users\NHamid\Desktop\hamid.bat
 }    
     
 }
