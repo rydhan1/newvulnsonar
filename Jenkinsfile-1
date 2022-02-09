@@ -19,8 +19,8 @@ pipeline {
         }
    	stage('Scan') {
 	    steps {
-
-         sh './mvnw clean install pmd:pmd findbugs:findbugs checkstyle:checkstyle'
+		echo 'Foding....'
+         
             }
           }
        }
