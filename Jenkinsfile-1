@@ -1,3 +1,4 @@
+Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
 
@@ -12,19 +13,10 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('FOD') {
+        stage('Deploy') {
             steps {
-                echo 'FODing....'
+                echo 'Deploying....'
             }
         }
-
-
-
-
-    
-}
-        
-        
-        
     }
 }
