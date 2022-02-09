@@ -20,10 +20,11 @@ pipeline {
         
         
      stage('Hamid') {
+      steps {
       cmd_exec('echo "Buils starting..."')
       cmd_exec('echo "dir /a /b"')
 }
-        
+   }     
         
     }
 }
