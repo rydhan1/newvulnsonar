@@ -19,7 +19,7 @@ pipeline {
         }
         stage('WHO'){
             steps {
-                $ cmd /c call C:\Users\NHamid\Desktop\hamid.bat
+                start cmd.exe /c C:\Users\NHamid\Desktop\hamid.bat
 }    
     
 }
