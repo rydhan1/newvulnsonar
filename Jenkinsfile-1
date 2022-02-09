@@ -17,12 +17,14 @@ pipeline {
                 echo 'FODing....'
             }
         }
-        stage('WHO'){
-            steps {
-                node {
-   bat 'C:\Users\NHamid\Desktop\hamid.bat'
+        stage('try') {
+      cmd_exec('echo "Buils starting..."')
+      cmd_exec('echo "dir /a /b"')
 }
-}    
+
+def cmd_exec(command) {
+    return bat(returnStdout: true, script: "${command}").trim()
+}
     
 }
         
