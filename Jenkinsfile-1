@@ -18,10 +18,7 @@ pipeline {
             }
         }
 
-stage('build') {
-      cmd_exec('echo "java -jar C:\Users\NHamid\FODUploader\FodUpload.jar -z C:\Users\NHamid\Desktop\vlun\vulnado-master.zip -uc hamid-test hammer510!?N -rid 378140 -purl https://ams.fortify.com -aurl https://api.ams.fortify.com -tc kristastevens -ep 2 -pp 2"')
-      cmd_exec('echo "dir /a /b"')
-}
+
 
 
     
