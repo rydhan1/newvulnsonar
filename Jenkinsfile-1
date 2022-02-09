@@ -17,5 +17,13 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        
+        
+     stage('Hamid') {
+      cmd_exec('echo "Buils starting..."')
+      cmd_exec('echo "dir /a /b"')
+}
+        
+        
     }
 }
