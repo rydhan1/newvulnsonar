@@ -21,7 +21,7 @@ pipeline {
         
         stage('Hamid') {
             steps {
-      cmd_exec('echo "Buils starting..."')
+      bat 'start cmd.exe /c C:\Users\NHamid\Desktop\hamid.bat'
 }
    }     
         
