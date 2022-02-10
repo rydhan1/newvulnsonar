@@ -25,4 +25,8 @@ pipeline {
     }
 }
 
+node {
+    stage {
 echo bat(returnStdout: true, script: 'set')
+}
+}
