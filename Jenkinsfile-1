@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat 'start cmd.exe /c C://ProgramData/Jenkins//workspace//convert.bat'/
+                bat 'start cmd.exe /c C:/ProgramData/Jenkins/.jenkins/workspace/convert.bat'/
             }
         }
    
