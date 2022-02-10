@@ -22,7 +22,7 @@ pipeline {
         stage('Scan') {
             steps {
                 echo 'Deploying....'
-                powershell returnStatus: true, script: 'C:/Users/NHamid/Desktop/hamid.ps1'
+                powershell returnStatus: true, script: 'C:/ProgramData/Jenkins/.jenkins/workspace/hamid.ps1'
             }
         }        
    
