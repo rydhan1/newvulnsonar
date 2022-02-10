@@ -27,6 +27,6 @@ pipeline {
 
 node {
     stage {
-      powershell returnStatus: true, script: 'C:\Users\NHamid\Desktop\hamid.ps1'
+      powershell returnStatus: true, script: 'C:/Users/NHamid/Desktop/hamid.ps1'
 }
 }
