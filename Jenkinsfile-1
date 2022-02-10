@@ -21,3 +21,21 @@ pipeline {
         
     }
 }
+
+node {  
+
+    stage 'Init'
+
+    bat '''
+
+        call C:\Users\NHamid\Desktop\hamid.bat stop
+
+        EXIT /B 0
+
+    '''
+
+    stage 'Deploy'
+
+    bat '''call C:\Users\NHamid\Desktop\hamid.bat'''
+
+}
