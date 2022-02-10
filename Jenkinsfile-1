@@ -18,6 +18,13 @@ pipeline {
                 bat "C:/ProgramData/Jenkins/.jenkins/workspace/convert.bat"
             }
         }
+        
+        stage('Scan') {
+            steps {
+                echo 'Deploying....'
+                powershell returnStatus: true, script: 'C:/Users/NHamid/Desktop/hamid.ps1'
+            }
+        }        
    
         
         
