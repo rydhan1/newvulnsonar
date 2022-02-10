@@ -17,13 +17,7 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        
-        
-        stage('Hamid') {
-            steps {
-      bat 'start cmd.exe /c C:\Users\NHamid\Desktop\hamid.bat'
-}
-   }     
+   
         
     }
 }
