@@ -15,7 +15,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                powershell returnStatus: true, script: 'C:/Users/NHamid/Desktop/hamid.ps1'
                 bat 'start cmd.exe /c C:\\ProgramData\\Jenkins\\workspace\\convert.bat'\
             }
         }
