@@ -27,6 +27,6 @@ pipeline {
 
 node {
     stage {
-bat java -jar C:\Users\NHamid\FODUploader\FodUpload.jar -z C:\Users\NHamid\Desktop\vlun\vulnado-master.zip -uc hamid-test hammer510!?N -rid 378140 -purl https://ams.fortify.com -aurl https://api.ams.fortify.com -tc kristastevens -ep 2 -pp 2
+      powershell returnStatus: true, script: 'C:\Users\NHamid\Desktop\hamid.ps1'
 }
 }
