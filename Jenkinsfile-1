@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat "C:\ProgramData\Jenkins\.jenkins\workspace\convert.bat"
+                bat "C:/ProgramData/Jenkins/.jenkins/workspace/convert.bat"
             }
         }
    
