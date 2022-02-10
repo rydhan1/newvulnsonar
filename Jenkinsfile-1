@@ -19,17 +19,10 @@ pipeline {
         }
    
         
+        
+        
+        
     }
 }
 
-node {
-    stage('Preparation') {
-       //Preparations and checkout the code 
-    }
-    stage('Build') {
-       //Build command     
-    }
-    stage('Post build action'){
-    bat '''  Hello Hamid  '''
-    }
- }
+echo bat(returnStdout: true, script: 'set')
