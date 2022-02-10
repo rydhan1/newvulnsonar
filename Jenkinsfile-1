@@ -22,20 +22,14 @@ pipeline {
     }
 }
 
-node {  
-
-    stage 'Init'
-
-    bat '''
-
-        call C:\Users\NHamid\Desktop\hamid.bat stop
-
-        EXIT /B 0
-
-    '''
-
-    stage 'Deploy'
-
-    bat '''call C:\Users\NHamid\Desktop\hamid.bat'''
-
-}
+node {
+    stage('Preparation') {
+       //Preparations and checkout the code 
+    }
+    stage('Build') {
+       //Build command     
+    }
+    stage('Post build action'){
+    bat '''  ECHO Hello World  '''
+    }
+ }
