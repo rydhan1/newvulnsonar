@@ -1,5 +1,5 @@
 pipeline {
-    agent dfsdf
+    agent hamidNode
 
     stages {
         stage('Build') {
