@@ -19,8 +19,7 @@ pipeline {
         }
    	stage('Scan') {
 	    steps {
-                withSonarQubeEnv(installationName: 'sq1') { 
-         sh './mvnw clean install pmd:pmd findbugs:findbugs checkstyle:checkstyle'
+               echo 'Deploying....'
             }
           }
        }
