@@ -15,6 +15,15 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                
+        stage('Bash') {
+            steps {
+            sh '''
+            #!/bin/bash
+            echo "hello world"
+            '''
+                
+                }
             }
         }
     }
