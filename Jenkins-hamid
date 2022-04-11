@@ -12,18 +12,13 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Bashing') {
             steps {
-                echo 'Deploying....'
-                
-        stage('Bash') {
-            steps {
-            sh '''
+                         sh '''
             #!/bin/bash
             echo "hello world"
-            '''
+         '''
                 
-                }
             }
         }
     }
