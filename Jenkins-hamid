@@ -14,9 +14,11 @@ pipeline {
         }
         stage('Bashing') {
             steps {
-                ps bash
-                #!/bin/bash
-                echo "hello world"
+sh """
+    echo 'foo'
+    # bar
+    echo 'hello'
+"""
                 
             }
         }
