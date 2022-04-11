@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Bashing') {
             steps {
-                powershell bash
+                ps bash
                 #!/bin/bash
                 echo "hello world"
                 
