@@ -76,4 +76,12 @@
 		</plugins>
 	</build>
 
+<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0ioesjvvd3qy-artifactory-primary-0-snapshots</name>
+        <url>https://nawbary.jfrog.io/artifactory/default-libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+	
 </project>
