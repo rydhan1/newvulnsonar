@@ -77,10 +77,15 @@
 	</build>
 
 <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>hamidn-artifactory-1-releases</name>
+        <url>http://35.236.103.251:8081/artifactory/libs-release-local</url>
+    </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>hamidn-artifactory-1-snapshots</name>
-        <url>http://35.235.87.42:8081/artifactory/libs-snapshot-local</url>
+        <url>http://35.236.103.251:8081/artifactory/libs-release-local</url>
     </snapshotRepository>
 </distributionManagement>
 	
