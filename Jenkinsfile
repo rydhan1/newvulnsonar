@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Package') {
             steps {
                 
          sh '''#!/bin/bash
@@ -11,14 +11,16 @@ pipeline {
                 
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                 sh '''#!/bin/bash
+                 mvn package
+         '''
+            }
+        }
+        stage('Confirm') {
+            steps {
+                echo 'Confirming....'
             }
         }
     }
