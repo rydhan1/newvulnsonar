@@ -82,10 +82,13 @@
         <name>hamidn-artifactory-1-releases</name>
         <url>http://35.236.103.251:8081/artifactory/libs-release-local</url>
     </repository>
+</distributionManagement>
+
+<distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
         <name>hamidn-artifactory-1-snapshots</name>
-        <url>http://35.236.103.251:8081/artifactory/libs-release-local</url>
+        <url>http://35.236.103.251:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
 </distributionManagement>
 	
