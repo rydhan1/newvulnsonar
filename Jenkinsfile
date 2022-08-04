@@ -18,7 +18,9 @@ pipeline {
         }
         stage('Confirm') {
             steps {
-                echo 'Confirming....'
+                 sh '''#!/bin/bash
+                 mvn deploy
+                 '''
             }
         }
     }
