@@ -6,16 +6,14 @@ pipeline {
             steps {
                 
          sh '''#!/bin/bash
-                 mvn package
+                 mvn deploy
          '''
                 
             }
         }
         stage('Deploy') {
             steps {
-                 sh '''#!/bin/bash
-                 mvn deploy
-         '''
+                 echo 'Middle....'
             }
         }
         stage('Confirm') {
