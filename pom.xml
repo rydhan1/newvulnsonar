@@ -76,12 +76,12 @@
 		</plugins>
 	</build>
 
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>hamidn-artifactory-1-releases</name>
-            <url>http://35.236.103.251:8081/artifactory/hamid-mvn-staging-sv-libs-release-local</url>
-        </repository>
-    </distributionManagement>
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>hamidn-artifactory-1-releases</name>
+        <url>http://35.236.103.251:8081/artifactory/opsec-mvn-dev-hamid-libs-release-local</url>
+    </repository>
+</distributionManagement>
 	
 </project>
