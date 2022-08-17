@@ -84,4 +84,12 @@
     </repository>
 </distributionManagement>
 	
+	<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>hamidn-artifactory-1-snapshots</name>
+        <url>http://35.236.103.251:8081/artifactory/opsec-mvn-dev-hamid-libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+	
 </project>
