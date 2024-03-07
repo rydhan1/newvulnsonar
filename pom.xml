@@ -76,4 +76,13 @@
 		</plugins>
 	</build>
 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>Artifactory West-releases</name>
+        <url>http://35.236.103.251:8081/artifactory/sameer-prefix-libs-release-local</url>
+    </repository>
+</distributionManagement>
+
+	
 </project>
