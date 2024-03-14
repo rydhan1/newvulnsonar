@@ -80,8 +80,13 @@
     <repository>
         <id>central</id>
         <name>hamidn-test-2-releases</name>
-        <url>http://34.75.93.75:8081/artifactory/sameertest2-libs-release-local</url>
+        <url>http://34.75.93.75:8081/artifactory/sameertestlocal</url>
     </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>hamidn-test-2-snapshots</name>
+        <url>http://34.75.93.75:8081/artifactory/sameertestlocal</url>
+    </snapshotRepository>
 </distributionManagement>
 	
 </project>
