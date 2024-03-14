@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 
-         sh '''
+         sh '''#!/bin/bash
                  mvn deploy
          '''
                 
